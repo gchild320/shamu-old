@@ -376,7 +376,7 @@ LINUXINCLUDE    := \
 KBUILD_CPPFLAGS := -D__KERNEL__
 
 KBUILD_CFLAGS   := $(GRAPHITE) -Wall -pipe -Wundef -Wstrict-prototypes -Wno-trigraphs \
-		   -fno-strict-aliasing -fno-common \
+		   -fstrict-aliasing -fno-common \
 		   -Werror-implicit-function-declaration \
 		   -mtune=cortex-a15 \
 		   -Wno-format-security \
