@@ -241,8 +241,8 @@ CONFIG_SHELL := $(shell if [ -x "$$BASH" ]; then echo $$BASH; \
 
 HOSTCC       = gcc
 HOSTCXX      = g++
-HOSTCFLAGS   = -Wall -Wmissing-prototypes -Wstrict-prototypes -Ofast -fomit-frame-pointer
-HOSTCXXFLAGS = -Ofast
+HOSTCFLAGS   = -Wall -Wmissing-prototypes -Wstrict-prototypes -Ofast -fomit-frame-pointer -fgraphite
+HOSTCXXFLAGS = -Ofast -fgraphite
 
 # Decide whether to build built-in, modular, or both.
 # Normally, just do built-in.
@@ -380,6 +380,7 @@ KBUILD_CFLAGS   := $(GRAPHITE) -Wall -pipe -Wundef -Wstrict-prototypes -Wno-trig
 		   -Werror-implicit-function-declaration \
 		   -funroll-loops -ftree-loop-im -ftree-loop-ivcanon \
 		   -mtune=cortex-a15 \
+		   -funswitch-loops \
 		   -Wno-format-security -marm -funsafe-math-optimizations \
 		   -fno-delete-null-pointer-checks
 KBUILD_AFLAGS_KERNEL :=
