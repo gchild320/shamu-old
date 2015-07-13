@@ -379,8 +379,6 @@ KBUILD_CFLAGS   := $(GRAPHITE) -Wall -pipe -Wundef -Wstrict-prototypes -Wno-trig
 		   -fstrict-aliasing -fno-common \
 		   -Werror-implicit-function-declaration \
 		   -funroll-loops -ftree-loop-im -ftree-loop-ivcanon \
-		   -mtune=cortex-a15 \
-		   -funswitch-loops \
 		   -Wno-format-security -marm -funsafe-math-optimizations \
                    -mtune=cortex-a15 \
                    -fmodulo-sched -fmodulo-sched-allow-regmoves -fno-tree-vectorize -ffast-math \
